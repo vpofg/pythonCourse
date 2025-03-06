@@ -59,25 +59,122 @@ print(f"Price 3 is {price1:+,.2f}") # mixed
 
 # While Loops
 
-name = input("Enter your name: ")
-while name == "":
-    print("Name not entered")
-    name = input("Enter your name")
-else:
-    print(f"Hello {name}")
+# name = input("Enter your name: ")
+# while name == "":
+#     print("Name not entered")
+#     name = input("Enter your name")
+# else:
+#     print(f"Hello {name}")
     
-age = int(input("Enter Your Age: "))
+# age = int(input("Enter Your Age: "))
 
-while age < 0:
-    print("Age can't be negative!")
-    age = int(input("Enter Your Age"))
-else:
-    print(f"You are {age} years old")
+# while age < 0:
+#     print("Age can't be negative!")
+#     age = int(input("Enter Your Age"))
+# else:
+#     print(f"You are {age} years old")
     
-food = input("Enter your favourite food (q to quit): ")
+# food = input("Enter your favourite food (q to quit): ")
 
-while not food == "q":
-    print(f"Your favourite food is: {food}")
-    food = input("Enter your favourite food (q to quit): ")
-else:
-    print("buhbuy")
+# while not food == "q":
+#     print(f"Your favourite food is: {food}")
+#     food = input("Enter your favourite food (q to quit): ")
+# else:
+#     print("buhbuy")
+    
+    
+# For Loops
+
+for x in range(1,11, 2):
+    print(x)
+    
+credit_card = "1234-5678-9012-3456"
+for x in credit_card:
+    print(x)
+    
+for x in range(1, 21):
+    if x == 13:
+        continue
+    else:
+        print(x)
+        
+        
+        
+# Collections:
+# List -> []  ordered and changeable. Duplicates OK
+# Set -> {}   unordered and immutable, but Add/Remove OK, Duplicates NO
+# Tuple -> () ordered and unchangeable. Duplicates OK. FASTER
+# Dictionary - discussed later
+
+## List
+fruits = ["apple", "banana", "orange", "coconut"]
+print(fruits[0]) # apple
+print(fruits[1]) # banana
+print(fruits[2]) # orange
+print(fruits[3]) # coconut
+print(fruits[::-1]) # prints backwards
+
+for fruit in fruits:
+    print(fruit)
+    
+print(len(fruits))
+
+print("apple" in fruits) # returns bool statement wheater the string is in the list
+
+fruits.append("pineapple")
+fruits.remove("apple")
+fruits.insert(0, "pineapple")
+fruits.sort()
+fruits.reverse()
+fruits.remove("pineapple")
+print(fruits.index("pineapple"))
+print(fruits.count("apple"))
+
+for fruit in fruits:
+    print(fruit)
+    
+
+## Set
+
+# elements are random, good for conmstants
+colors = {"red", "green", "blue"}
+colors.add("pink")
+print(colors)
+colors.remove("red")
+print(colors)
+colors.pop()
+print(colors)
+colors.clear()
+print(colors)
+colors.add("banana")
+print(colors)
+colors.add("banana")
+print(colors)
+
+## Tuples
+
+veggies = ("carrot", "celery", "potato")
+print("beetroot" in veggies)
+print(fruits.count("carrot"))
+
+for veg in veggies:
+    print(veg)
+    
+    
+# 2D lists
+
+fruitties =  ["apple", "orange", "banana", "coconut"]
+vegetables = ["celery", "carrots", "potatoes"]
+meats =      ["chicken", "fish", "turkey"]
+
+groceries = [fruitties, vegetables, meats]
+print(groceries[0]) # this outputs the fruitties list
+print(groceries[0][0]) # apple
+
+for collection in groceries:
+    print(collection)
+    
+for collection in groceries:
+    for food in collection:
+        print(food, end=" ")
+    print()
